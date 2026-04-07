@@ -1,0 +1,217 @@
+# Copyright (C) 2026 Dolicraft <contact@dolicraft.com>
+# Language file for DolicraftS3 module - English
+#
+
+# Module
+Module500100Name = DolicraftS3
+Module500100Desc = S3-compatible cloud storage for Dolibarr (AWS, OVH, Scaleway, Wasabi, MinIO, etc.)
+DolicraftS3Desc = Multi-cloud S3-compatible object storage integration. Supports AWS S3, OVH Object Storage, Scaleway, Wasabi, MinIO, DigitalOcean Spaces, Backblaze B2, Cloudflare R2, and any S3-compatible provider.
+
+# About / Dolicraft branding
+AboutModule = About this module
+AboutDolicraft = About Dolicraft
+Publisher = Publisher
+AboutDolicraftDesc = Who we are
+AboutDolicraftDescValue = Dolicraft is a company specializing in the development of professional modules for Dolibarr ERP/CRM. We design reliable, high-performance solutions adapted to real business needs.
+AboutServices = Our services
+AboutServicesValue = Custom Dolibarr module development, ERP integration, cloud infrastructure consulting, technical support and maintenance. Contact us for a tailored solution!
+DefaultEndpoint = Default Endpoint
+
+# Admin / Setup
+DolicraftS3Setup = DolicraftS3 - Setup
+DolicraftS3About = DolicraftS3 - About
+S3Provider = Provider
+S3ProviderSelect = Select your S3 provider
+S3Connection = Connection Settings
+S3Endpoint = Endpoint URL
+S3Region = Region
+S3AccessKey = Access Key
+S3SecretKey = Secret Key
+S3BucketSettings = Bucket Configuration
+S3Bucket = Bucket Name
+S3PathPrefix = Path Prefix
+S3PathPrefixHelp = Optional prefix for all files stored in the bucket (e.g., dolibarr/documents)
+S3Advanced = Advanced Settings
+S3UsePathStyle = Use Path-Style Access
+S3UsePathStyleHelp = Required for MinIO and some providers. Uses bucket-in-path instead of bucket-in-hostname.
+S3SyncMode = Synchronization Mode
+S3SyncManual = Manual (on demand)
+S3SyncAutoUpload = Auto Upload (new files are uploaded automatically)
+S3SyncFullSync = Full Sync (bidirectional synchronization)
+S3SyncModeHelp = Manual: use the browser to manage files. Auto Upload: new Dolibarr documents are pushed to S3. Full Sync: keeps S3 and Dolibarr in sync.
+S3TestConnection = Test Connection
+S3ConnectionSuccess = Connection to S3 bucket successful!
+S3ConnectionFailed = Connection to S3 failed
+
+# Browser
+S3Browser = S3 File Browser
+S3Root = Root
+S3Upload = Upload
+S3EmptyFolder = This folder is empty
+S3NotConfigured = S3 storage is not configured yet.
+S3GoToSetup = Go to setup
+S3ConfirmDelete = Are you sure you want to delete this file from S3?
+S3FileDeleted = File %s deleted from S3
+S3DeleteError = Error deleting file from S3
+S3FileUploaded = File %s uploaded to S3
+S3FilesUploaded = %s file(s) uploaded to S3 successfully
+S3UploadError = Error uploading file to S3
+S3DownloadError = Error downloading file from S3
+S3ListError = Error listing S3 objects
+
+# Upload page
+S3UploadFiles = Upload Files to S3
+S3DestinationPath = Destination Folder
+S3DestPathHelp = Leave empty to upload to the root of your bucket prefix
+S3SelectFiles = Select Files
+S3SupportedProviders = Supported Providers
+
+# Permissions
+Permission500101 = Read S3 files
+Permission500102 = Upload files to S3
+Permission500103 = Delete files from S3
+Permission500104 = Configure S3 settings
+
+# ========================================================================
+# Documentation page
+# ========================================================================
+
+# Title
+DocTitle = DolicraftS3 - Documentation
+Documentation = Documentation
+
+# 1. Introduction
+DocIntroTitle = Introduction
+DocIntroText = DolicraftS3 is a module developed by Dolicraft that connects your Dolibarr ERP to any S3-compatible cloud storage. It works with all major providers without requiring the AWS SDK — everything runs with native PHP and cURL.
+DocFeatures = Feature
+DocFeatureMultiCloud = Multi-Cloud Support
+DocFeatureMultiCloudDesc = Compatible with AWS S3, OVH, Scaleway, Wasabi, MinIO, DigitalOcean Spaces, Backblaze B2, Cloudflare R2, and any S3-compatible provider.
+DocFeatureNativePHP = Zero Dependencies
+DocFeatureNativePHPDesc = No AWS SDK or Composer required. Uses native PHP with cURL and AWS Signature V4 authentication.
+DocFeatureBrowser = File Browser
+DocFeatureBrowserDesc = Built-in file browser with folder navigation, breadcrumb trail, and file listing with sizes and dates.
+DocFeatureUpload = File Upload
+DocFeatureUploadDesc = Upload single or multiple files directly to S3 from Dolibarr, with automatic MIME type detection.
+DocFeaturePresigned = Pre-signed URLs
+DocFeaturePresignedDesc = Generate temporary download links for sharing files without exposing your S3 credentials.
+DocFeatureSync = Synchronization Modes
+DocFeatureSyncDesc = Three modes: Manual, Auto Upload (push new documents to S3), and Full Sync (bidirectional).
+DocFeaturePermissions = Granular Permissions
+DocFeaturePermissionsDesc = Four separate permissions: read, upload, delete, and configure. Assign them per user or group.
+DocFeatureLogs = Activity Logs
+DocFeatureLogsDesc = All S3 operations (upload, download, delete) are logged with user, date, file size, and status.
+DocFeatureMultilang = Multilingual
+DocFeatureMultilangDesc = Available in English, French, Spanish, German, Italian, and Brazilian Portuguese.
+
+# 2. Installation
+DocInstallTitle = Installation
+DocInstallText = Follow these three steps to install the module:
+DocInstallStep1 = Step 1: Copy the module files
+DocInstallStep1Text = Copy the dolicrafts3/ folder into your Dolibarr custom modules directory: htdocs/custom/dolicrafts3/
+DocInstallStep2 = Step 2: Activate the module
+DocInstallStep2Text = Go to Home > Setup > Modules/Applications, search for "DolicraftS3" in the "Technic" category, and click the toggle to enable it.
+DocInstallStep3 = Step 3: Configure your S3 connection
+DocInstallStep3Text = Go to the Settings tab of this module and enter your provider credentials (endpoint, access key, secret key, bucket name).
+
+# 3. Configuration
+DocConfigTitle = Configuration Parameters
+DocConfigText = All settings are available in the Settings tab. Here is a detailed explanation of each parameter:
+DocRequired = Required
+DocParamProviderDesc = Select a preset provider to auto-fill endpoint and region, or choose "Custom" for any S3-compatible service.
+DocParamEndpointDesc = The full URL of the S3 endpoint (e.g., https://s3.eu-west-3.amazonaws.com). This varies by provider.
+DocParamRegionDesc = The region of your bucket (e.g., eu-west-3, fr-par, gra). Defaults to us-east-1 if left empty.
+DocParamAccessKeyDesc = Your S3 access key ID, provided by your cloud provider.
+DocParamSecretKeyDesc = Your S3 secret access key. Stored in the Dolibarr database. Masked in the interface after saving.
+DocParamBucketDesc = The name of the S3 bucket where files will be stored.
+DocParamPrefixDesc = Optional path prefix inside the bucket (e.g., dolibarr/documents). All files will be stored under this prefix.
+DocParamPathStyleDesc = Enable if your provider requires path-style URLs (bucket in path). Required for MinIO and Cloudflare R2. Most providers use virtual-hosted style (default).
+DocParamSyncModeDesc = Choose how files are synchronized between Dolibarr and S3. See the Synchronization Modes section for details.
+
+# 4. Provider guides
+DocProvidersTitle = Provider Configuration Guides
+DocProvidersText = Below are step-by-step instructions for each supported provider:
+DocProviderAWS = Amazon Web Services (AWS S3)
+DocProviderAWSSteps = 1. Log in to the AWS Management Console\n2. Go to IAM > Users > Create a user with "AmazonS3FullAccess" policy\n3. Generate an access key pair (Access Key ID + Secret Access Key)\n4. Create a bucket in S3 > Buckets > Create bucket\n5. In DolicraftS3: select "AWS" as provider, enter your region (e.g., eu-west-3), access key, secret key, and bucket name
+DocProviderOVH = OVHcloud Object Storage
+DocProviderOVHSteps = 1. Log in to the OVH Control Panel\n2. Go to Public Cloud > Object Storage > Create a container (S3 API)\n3. Go to Users & Roles > Create a user with "ObjectStore operator" role\n4. Note the S3 access key and secret key from the user credentials\n5. In DolicraftS3: select "OVH", set region (e.g., gra, sbg, bhs), and enter your credentials
+DocProviderScaleway = Scaleway Object Storage
+DocProviderScalewaySteps = 1. Log in to the Scaleway Console\n2. Go to Object Storage > Create a bucket\n3. Go to IAM > API Keys > Generate a new API key\n4. In DolicraftS3: select "Scaleway", set region (fr-par or nl-ams), enter access key, secret key, and bucket name
+DocProviderWasabi = Wasabi Hot Cloud Storage
+DocProviderWasabiSteps = 1. Log in to the Wasabi Console\n2. Create a bucket in your preferred region\n3. Go to Access Keys > Create a new access key\n4. In DolicraftS3: select "Wasabi", set region (e.g., eu-central-1), enter credentials and bucket name\nNote: Wasabi has no egress fees, making it very cost-effective for downloads.
+DocProviderMinIO = MinIO (Self-Hosted)
+DocProviderMinIOSteps = 1. Install MinIO on your server (Docker: docker run -p 9000:9000 minio/minio server /data)\n2. Access the MinIO Console (default: http://localhost:9001)\n3. Create a bucket and generate an access key pair\n4. In DolicraftS3: select "MinIO", set endpoint to your MinIO URL (e.g., http://your-server:9000)\n5. IMPORTANT: Path-Style access will be enabled automatically (required for MinIO)
+DocProviderDO = DigitalOcean Spaces
+DocProviderDOSteps = 1. Log in to DigitalOcean\n2. Go to Spaces > Create a Space (choose datacenter region)\n3. Go to API > Spaces Keys > Generate new key\n4. In DolicraftS3: select "DigitalOcean", set region (e.g., fra1, nyc3, ams3), enter key, secret, and Space name
+DocProviderB2 = Backblaze B2
+DocProviderB2Steps = 1. Log in to Backblaze\n2. Go to Buckets > Create a Bucket\n3. Go to App Keys > Add a New Application Key (with read/write access to your bucket)\n4. Note the keyID (= access key) and applicationKey (= secret key)\n5. In DolicraftS3: select "Backblaze B2", set region (e.g., eu-central-003), enter credentials and bucket name
+DocProviderR2 = Cloudflare R2
+DocProviderR2Steps = 1. Log in to the Cloudflare Dashboard\n2. Go to R2 > Create a bucket\n3. Go to R2 > Manage R2 API Tokens > Create API token (with read/write permissions)\n4. Note the Access Key ID and Secret Access Key\n5. In DolicraftS3: select "Cloudflare R2", replace {account_id} in the endpoint with your Cloudflare account ID\n6. Path-Style is enabled automatically. Region is "auto".\nNote: Cloudflare R2 has zero egress fees.
+
+# 5. Usage - File Browser
+DocUsageBrowserTitle = Using the File Browser
+DocUsageBrowserText = The S3 File Browser is accessible from the DolicraftS3 top menu. It allows you to navigate, upload, download, and delete files.
+DocHowTo = How to
+DocBrowseFolders = Browse Folders
+DocBrowseFoldersHow = Click on a folder name to navigate into it. Use the breadcrumb trail at the top to go back to a parent folder.
+DocUploadFile = Upload a File
+DocUploadFileHow = Use the file input at the top of the browser page, select a file, and click "Upload". The file is uploaded to the current folder.
+DocDownloadFile = Download a File
+DocDownloadFileHow = Click the download icon next to any file. The file will be downloaded directly from S3 to your browser.
+DocDeleteFile = Delete a File
+DocDeleteFileHow = Click the delete icon next to a file. A confirmation dialog will appear. Requires the "Delete" permission.
+DocMultiUpload = Multi-File Upload
+DocMultiUploadHow = Use the dedicated Upload page (left menu). Select multiple files at once and choose a destination folder.
+
+# 6. Sync modes
+DocSyncTitle = Synchronization Modes
+DocSyncText = DolicraftS3 offers three synchronization modes to fit different workflows:
+DocBehavior = Behavior
+DocRecommendedFor = Recommended for
+DocSyncManualDesc = Files are only transferred when you explicitly use the browser or upload page. No automatic operations.
+DocSyncManualUse = Testing, occasional backups, or when you want full control over what is stored in S3.
+DocSyncAutoDesc = Every new document created in Dolibarr (invoices, proposals, etc.) is automatically uploaded to S3 in the background.
+DocSyncAutoUse = Automatic cloud backup of all Dolibarr documents, disaster recovery strategy.
+DocSyncFullDesc = Bidirectional sync: new files in Dolibarr are pushed to S3, and files added directly to S3 are visible in Dolibarr.
+DocSyncFullUse = Multi-site setups, shared document repositories, or when external tools also write to the same S3 bucket.
+
+# 7. Permissions
+DocPermissionsTitle = Permission System
+DocPermissionsText = DolicraftS3 provides four granular permissions. Assign them via Home > Users & Groups > Permissions:
+DocGrantsAccess = Grants access to
+DocPermReadDesc = View the S3 file browser, list folders and files, download files from S3.
+DocPermUploadDesc = Upload new files to S3 via the browser or the multi-upload page.
+DocPermDeleteDesc = Delete files from S3. Use with caution — deleted files cannot be recovered unless versioning is enabled on your bucket.
+DocPermConfigDesc = Access the admin setup page to modify S3 connection settings. Typically reserved for administrators only.
+
+# 8. Technical architecture
+DocTechTitle = Technical Architecture
+DocTechText = The module follows Dolibarr's standard module structure. Here is the file tree:
+DocTreeSetup = # Configuration page
+DocTreeDoc = # This documentation page
+DocTreeAbout = # About page with Dolicraft info
+DocTreeClient = # S3 client (AWS Sig V4, cURL)
+DocTreeDescriptor = # Module descriptor
+DocTreeCSS = # Module stylesheets
+DocTreeImg = # Module icons
+DocTreeLangs = # Translation files (6 languages)
+DocTreeLib = # Helper functions & providers
+DocTreeSQL = # Database tables (activity logs)
+DocTreeBrowser = # S3 file browser page
+DocTreeUpload = # Multi-file upload page
+
+# 9. FAQ
+DocFAQTitle = FAQ / Troubleshooting
+DocFAQ1Q = I get "Access Denied" when testing the connection.
+DocFAQ1A = Check that your access key and secret key are correct. Ensure the IAM user/policy has s3:ListBucket, s3:GetObject, s3:PutObject, and s3:DeleteObject permissions on the bucket.
+DocFAQ2Q = The connection works but no files are listed.
+DocFAQ2A = Check the Path Prefix setting. If set, only files under that prefix will be shown. Also verify the bucket is not empty.
+DocFAQ3Q = Uploads fail with a timeout error.
+DocFAQ3A = Large files may exceed PHP's upload limits. Check your php.ini settings: upload_max_filesize, post_max_size, and max_execution_time. Also ensure your S3 provider allows the file size.
+DocFAQ4Q = Should I enable Path-Style access?
+DocFAQ4A = Only if your provider requires it. MinIO and Cloudflare R2 need path-style. AWS, OVH, Scaleway, and Wasabi use virtual-hosted style (default). When in doubt, try without it first.
+DocFAQ5Q = How do I migrate from one S3 provider to another?
+DocFAQ5A = Simply update the endpoint, region, access key, secret key, and bucket in the Settings tab. Your existing files remain on the old provider. Use tools like rclone or s3cmd to migrate data between buckets.
+
+# 10. Support
+DocSupportTitle = Support & Contact
+DocSupportText = Need help with DolicraftS3 or want a custom feature? Our team is here to assist you.
