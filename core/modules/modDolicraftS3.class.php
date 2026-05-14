@@ -66,7 +66,7 @@ class modDolicraftS3 extends DolibarrModules
 		$this->editor_email = 'contact@dolicraft.com';
 
 		// Possible values for version are: 'development', 'experimental', 'dolibarr', 'dolibarr_deprecated' or a version string like 'x.y.z'
-		$this->version = '1.0.0';
+		$this->version = '1.1.0';
 
 		// Url to the file with your last numberversion of this module
 		// $this->url_last_version = 'http://www.example.com/versionmodule.txt';
@@ -121,15 +121,15 @@ class modDolicraftS3 extends DolibarrModules
 
 		// Constants
 		$this->const = array(
-			array('DOLICRAFTS3_PROVIDER', 'chaine', 'custom', 'S3 provider type', 0, 'current', 1),
-			array('DOLICRAFTS3_ENDPOINT', 'chaine', '', 'S3 endpoint URL', 0, 'current', 1),
-			array('DOLICRAFTS3_REGION', 'chaine', 'us-east-1', 'S3 region', 0, 'current', 1),
-			array('DOLICRAFTS3_ACCESS_KEY', 'chaine', '', 'S3 access key', 0, 'current', 1),
-			array('DOLICRAFTS3_SECRET_KEY', 'chaine', '', 'S3 secret key (encrypted)', 0, 'current', 1),
-			array('DOLICRAFTS3_BUCKET', 'chaine', '', 'S3 bucket name', 0, 'current', 1),
-			array('DOLICRAFTS3_PATH_PREFIX', 'chaine', '', 'Prefix path inside bucket', 0, 'current', 1),
-			array('DOLICRAFTS3_USE_PATH_STYLE', 'chaine', '0', 'Use path-style endpoint (required for MinIO, some providers)', 0, 'current', 1),
-			array('DOLICRAFTS3_SYNC_MODE', 'chaine', 'manual', 'Sync mode: manual, auto_upload, full_sync', 0, 'current', 1),
+			array('DOLICRAFTS3_PROVIDER', 'chaine', 'custom', 'S3 provider type', 0, 'current', 0),
+			array('DOLICRAFTS3_ENDPOINT', 'chaine', '', 'S3 endpoint URL', 0, 'current', 0),
+			array('DOLICRAFTS3_REGION', 'chaine', 'us-east-1', 'S3 region', 0, 'current', 0),
+			array('DOLICRAFTS3_ACCESS_KEY', 'chaine', '', 'S3 access key', 0, 'current', 0),
+			array('DOLICRAFTS3_SECRET_KEY', 'chaine', '', 'S3 secret key (encrypted)', 0, 'current', 0),
+			array('DOLICRAFTS3_BUCKET', 'chaine', '', 'S3 bucket name', 0, 'current', 0),
+			array('DOLICRAFTS3_PATH_PREFIX', 'chaine', '', 'Prefix path inside bucket', 0, 'current', 0),
+			array('DOLICRAFTS3_USE_PATH_STYLE', 'chaine', '0', 'Use path-style endpoint (required for MinIO, some providers)', 0, 'current', 0),
+			array('DOLICRAFTS3_SYNC_MODE', 'chaine', 'manual', 'Sync mode: manual, auto_upload, full_sync', 0, 'current', 0),
 		);
 
 		// Permissions
