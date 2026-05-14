@@ -138,7 +138,7 @@ class DolicraftS3Client
 	{
 		$path = ltrim($path, '/');
 		if ($this->usePathStyle) {
-			return $this->endpoint.'/'.$this->bucket.($path !== '' ? '/'.$path : '');
+			return $this->endpoint.'/'.$this->bucket.'/'.$path;
 		}
 		$parsed = parse_url($this->endpoint);
 		$scheme = $parsed['scheme'] ?? 'https';
